@@ -1,4 +1,4 @@
-kind: piepline
+kind: pipeline
 type: docker
 name: JavaCover
 
