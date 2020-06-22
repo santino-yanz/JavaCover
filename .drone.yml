@@ -2,8 +2,13 @@ kind: piepline
 type: docker
 name: JavaCover
 
+platform: 
+  os: linux
+  arch: amd64
+  
 steps:
 - name: test
+  pull: always
   image: alpine
   commands:
   - echo hello world
