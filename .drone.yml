@@ -2,13 +2,9 @@ kind: piepline
 type: docker
 name: JavaCover
 
-platform: 
-  os: linux
-  arch: amd64
-  
 steps:
 - name: test
-  pull: always
-  image: alpine
+  image: maven:3-jdk8
   commands:
-  - echo hello world
+  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+  - mvn test -B
